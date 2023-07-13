@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neporendi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="slider()">
+    <div class="banner">
+        <div class="slider">
+            <img src="images/nepporendi-pic.jpg" id="slideImg">
+        </div>
+        <div class="overlay">
+            <div class="navbar">
+                <a href="">
+                <div class="logo">
+                  <img src="images/logo_trans.png">
+                </a>
+               </div>
+               
+            <a href="https://neporendiforums.github.io/Neporendi-Website-Contact-DEMO/" class="navbar">
+            <div class="menu-icon1">
+                <img src="images/contact.png" >
+               </div>
+            </a>
+
+            <a href="https://www.google.com/maps?q=7+Vine+Street++Old+Reynella+5161" class="navbar">
+            <div class="menu-icon2">
+                <img src="images/maps-and-flags.png">
+               </div>
+            </a>
+            
+            <a href="https://www.onkaparingacity.com/Community-facilities-support/Venues-facilities/Community-centres/Neporendi-Aboriginal-Community-Centre" class="navbar">
+            <div class="menu-icon3">
+                <img src="images/info.png">
+               </div>
+            </a>
+            </div>
+
+            <div class="content">
+                <h1>Neporendi</h1>
+                <h3>Aboriginal Forum Inc.</h3>
+
+                <div>
+                    <a href="https://www.onkaparingacity.com/Community-facilities-support/Venues-facilities/Community-centres/Neporendi-Aboriginal-Community-Centre">
+                    <button type="button" class="btn-1">LEARN MORE</button>
+                    </a>
+                    <a href="https://neporendiforums.github.io/Neporendi-Website-Contact-DEMO/">
+                       <button type="button" class="btn-2">CONTACT</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script>
+        var slideImg = document.getElementById("slideImg");
+
+        var images = new Array(
+            "images/img-1.jpg",
+            "images/img-2.jpg",
+            "images/img-3.jpg",
+            "images/img-4.jpg",
+            "images/img-5.jpg",
+        );
+
+       var len = images.length;
+       var i = 0;
+
+       function slider(){
+           if(i > len-1){
+                i = 0;
+           }
+           slideImg.src = images[i];
+           i++;
+           setTimeout('slider()',3000);
+       }
+    </script>
+
+
+</body>
+</html>
